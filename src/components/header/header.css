@@ -1,0 +1,12 @@
+#header-component{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+    padding: 12px;
+}
+#logo-header-component{
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}

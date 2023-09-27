@@ -1,0 +1,22 @@
+#header-playing-page{
+    padding: 20px;
+}
+
+
+#body-playing-page{
+    display: flex;
+    flex-direction: row;
+}
+
+#playing{
+    padding-left: 5%;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+#related{
+    text-align: left;
+    padding-left: 10%;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
