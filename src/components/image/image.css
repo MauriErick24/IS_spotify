@@ -1,3 +1,5 @@
 #image-component{
-    padding: 50px 30px;
+    
+    align-items: center;
+    border: 2px solid #fff;
 }

@@ -2,6 +2,7 @@ import { Component } from "react";
 import './playing_page.css';
 import Header from "../../components/header/header";
 import MusicCard from "../../components/music_card/musicCard";
+import RelatedList from "../../components/related_list/related_list";
 
 class PlayingPage extends Component{
     render(){
@@ -18,6 +19,7 @@ class PlayingPage extends Component{
                     </div>
                     <div id="related">
                         <h1>RELACIONADOS</h1>
+                        <RelatedList/>
                     </div>
                 </div>
             </div>

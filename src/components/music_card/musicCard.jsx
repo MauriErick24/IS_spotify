@@ -9,13 +9,13 @@ class MusicCard extends Component{
     render(){
         return(
             <div id="music-card">
-                <div>
+                <div id="music-image">
                     <Image/>
                 </div>
-                <div>
+                <div id="music-info">
                     <Info/>
                 </div>
-                <div>
+                <div id="music-playing">
                     <PlayingComponent/>
                 </div>
             </div>
