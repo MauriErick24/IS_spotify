@@ -1,7 +1,7 @@
 #music-card{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+   
     text-align: center;
     border: 2px solid #fff;
     height: 500px;
@@ -17,9 +17,15 @@
 
 #music-info{
     text-align: left;
-    padding: 10px;
+    padding-top: 50px;
 }
 
+#time-bar{
+    padding-top: 25px;
+}
+
+
 #music-playing{
+    padding-top: 25px;
     padding-bottom: 20px;
 }

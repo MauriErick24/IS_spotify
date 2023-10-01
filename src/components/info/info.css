@@ -3,3 +3,14 @@
     flex-direction: column;
     text-align: left;
 }
+
+#name-info{
+    font-size: 25px;
+    font-family: Arial sans-serif;
+}
+
+#artist-info{
+    padding-top: 8px;
+    font-size: 15px;
+    font-weight: bold;
+}
