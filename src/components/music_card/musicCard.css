@@ -9,7 +9,10 @@
 
 #music-image{
     /* padding: 30px 20px; */
+    height: 52%;
+    width: auto;
     align-items: center;
+    border: 2px solid #fff;
 }
 
 #music-info{

@@ -1,5 +1,9 @@
 #image-component{
-    
     align-items: center;
     border: 2px solid #fff;
+}
+
+#image{
+    height: 100%;
+    
 }
