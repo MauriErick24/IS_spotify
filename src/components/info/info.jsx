@@ -6,10 +6,10 @@ class Info extends Component{
         return(
             <div id="info-component">
                 <div id="name-info">
-                    Nombre de la cancion
+                    {this.props.name}
                 </div>
                 <div id="artist-info">
-                    ARTISTA
+                    {this.props.artist}
                 </div>
             </div>
         )

@@ -9,7 +9,7 @@
 
 #music-image{
     /* padding: 30px 20px; */
-    height: 52%;
+    height: 60%;
     width: auto;
     align-items: center;
     border: 2px solid #fff;
@@ -17,11 +17,13 @@
 
 #music-info{
     text-align: left;
-    padding-top: 50px;
+    padding-top: 40px;
+    padding-left: 10px;
 }
 
 #time-bar{
     padding-top: 25px;
+    margin: none;
 }
 
 

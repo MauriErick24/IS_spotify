@@ -5,8 +5,13 @@ import Image from "../image/image";
 import Info from "../info/info";
 import PlayingComponent from "../playing_component/playingComponent";
 import TimeBar from "../time_bar/time_bar";
+import Sound from '../../sounds/understand.mp3'
 
 class MusicCard extends Component{
+    state={
+        name: "Understand",
+        artist: "BoyWithUke"
+    }
     render(){
         return(
             <div id="music-card">
@@ -14,13 +19,14 @@ class MusicCard extends Component{
                     <Image/>
                 </div>
                 <div id="music-info">
-                    <Info/>
+                    <Info name={this.state.name}
+                          artist={this.state.artist}/>
                 </div>
                 <div id="time-bar">
-                    <TimeBar/>
+                    <TimeBar sound={Sound}/>
                 </div>
                 <div id="music-playing">
-                    <PlayingComponent/>
+                    {/* <PlayingComponent/> */}
                 </div>
             </div>
         )

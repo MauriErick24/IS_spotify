@@ -1,64 +1,89 @@
-import { Component } from "react";
-
+import React, { Component } from "react";
+import "./time_bar.css"
 class TimeBar extends Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-          currentTime: 0,
-          duration: 0,
-        };
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentTime: 0,
+      duration: 0,
+      isPlaying: false,
+      sound: this.props.sound
+    };
+    this.audioRef = React.createRef();
+  }
+
+  componentDidMount() {
+    // Puedes agregar lógica adicional aquí, como cargar la fuente de audio.
+  }
+
+  handlePlayPause = () => {
+    this.setState((prevState) => ({
+      isPlaying: !prevState.isPlaying,
+    }), () => {
+      if (this.state.isPlaying) {
+        this.audioRef.current.play();
+      } else {
+        this.audioRef.current.pause();
       }
-    
-      componentDidMount() {
-        // duración total de la canción (en segundos)
-        const simulatedDuration = 180;
-        this.setState({ duration: simulatedDuration });
-    
-        // actualización del tiempo actual cada segundo
-        this.intervalId = setInterval(() => {
-          this.setState(prevState => ({
-            currentTime: prevState.currentTime < simulatedDuration ? prevState.currentTime + 1 : 0,
-          }));
-        }, 1000);
-      }
-    
-      componentWillUnmount() {
-        clearInterval(this.intervalId);
-      }
-    
-      handleTimeChange = event => {
-        const newTime = parseInt(event.target.value, 10);
-        this.setState({ currentTime: newTime });
-      };
-    
-      formatTime = seconds => {
-        const minutes = Math.floor(seconds / 60);
-        const remainingSeconds = seconds % 60;
-        return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
-      };
-    
-      render() {
-        const { currentTime, duration } = this.state;
-    
-        return (
+    });
+  };
+
+  handleTimeChange = (e) => {
+    const currentTime = parseFloat(e.target.value);
+    this.setState({ currentTime }, () => {
+      this.audioRef.current.currentTime = currentTime;
+    });
+  };
+
+  handleTimeUpdate = () => {
+    this.setState({
+      currentTime: this.audioRef.current.currentTime,
+      duration: this.audioRef.current.duration,
+    });
+  };
+
+  formatTime = (time) => {
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    const formattedTime = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    return formattedTime;
+  };
+  
+
+  render() {
+    const { currentTime, duration, isPlaying } = this.state;
+
+    return (
+      <div>
+        <audio
+          ref={this.audioRef}
+          onTimeUpdate={this.handleTimeUpdate}
+          controls={false} // Desactiva los controles predeterminados
+        >
+          <source src={this.state.sound} type="audio/mp3" />
+        </audio>
+
+        <div>
+          <span>{this.formatTime(currentTime)}</span>
+          <input
+            type="range"
+            min={0}
+            max={duration}
+            value={currentTime}
+            onChange={this.handleTimeChange}
+          />
+          <span>{this.formatTime(duration)}</span>
+          {/* <span onClick={this.handlePlayPause}>
+              {isPlaying ? '⏸️' : '▶️'}
+          </span> */}
           <div>
-            //! Styles 
-            {/* <audio controls>
-              <source src="cancion.mp3" type="audio/mp3" />
-            </audio> */}
-            <div >
-              <span>{this.formatTime(currentTime)}</span>
-              <input
-                type="range"
-                min={0}
-                max={duration}
-                value={currentTime}
-                onChange={this.handleTimeChange}
-              />
-              <span>{this.formatTime(duration)}</span>
+            <div id="play-pause" onClick={this.handlePlayPause}>
+              {isPlaying ? '⏸️' : '▶️'}
             </div>
           </div>
-        );
-      }
+        </div>
+      </div>
+    );
+  }
 }
 export default TimeBar
