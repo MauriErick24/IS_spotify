@@ -5,12 +5,13 @@ import Image from "../image/image";
 import Info from "../info/info";
 import PlayingComponent from "../playing_component/playingComponent";
 import TimeBar from "../time_bar/time_bar";
-import Sound from '../../sounds/understand.mp3'
+import Sound from '../../sounds/understand.mp3';
 
 class MusicCard extends Component{
     state={
         name: "Understand",
-        artist: "BoyWithUke"
+        artist: "BoyWithUke",
+        source: "../../sounds/understand.mp3"
     }
     render(){
         return(

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./time_bar.css"
+
 class TimeBar extends Component{
   constructor(props) {
     super(props);
