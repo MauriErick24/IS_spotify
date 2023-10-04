@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a433a304.css",
+    "main.js": "/static/js/main.403262e3.js",
+    "static/js/787.a19c38e9.chunk.js": "/static/js/787.a19c38e9.chunk.js",
+    "static/media/understand.mp3": "/static/media/understand.69d274e1272aa833d4fc.mp3",
+    "static/media/understand-boywithuke.png": "/static/media/understand-boywithuke.b6833accae84f04f451a.png",
+    "index.html": "/index.html",
+    "main.a433a304.css.map": "/static/css/main.a433a304.css.map",
+    "main.403262e3.js.map": "/static/js/main.403262e3.js.map",
+    "787.a19c38e9.chunk.js.map": "/static/js/787.a19c38e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a433a304.css",
+    "static/js/main.403262e3.js"
+  ]
+}
