@@ -1,5 +1,6 @@
 import { Component } from "react";
 import './header.css'
+import Seeker from "../seeker/seeker"
 
 class Header extends Component{
     render(){
@@ -9,7 +10,7 @@ class Header extends Component{
                     SPOTIFY
                 </div>
                 <div id="options-header-component">
-                    Espacio de mas opciones
+                    <Seeker/>
                 </div>
                 
             </div>
