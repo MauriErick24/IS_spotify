@@ -22,6 +22,9 @@ class Seeker extends Component{
         return(
             
             <div className="containerInput">
+                <button className="btn btn-success" onClick={()=> mostrarAlerta()}>
+                    <FontAwesomeIcon icon={faSearch}/>
+                </button>
                 <input
                     className="form-control inputBuscar"
                     placeholder="¿Que quieres buscar hoy?"
@@ -30,9 +33,7 @@ class Seeker extends Component{
                 <button className="btn btn-filtro">
                     <FontAwesomeIcon icon={faFilter}/>
                 </button>
-                <button className="btn btn-success" onClick={()=> mostrarAlerta()}>
-                    <FontAwesomeIcon icon={faSearch}/>
-                </button>
+                
             </div>
         )
           
