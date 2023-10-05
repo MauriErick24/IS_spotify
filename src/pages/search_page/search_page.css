@@ -1,0 +1,18 @@
+#header-search-page{
+    padding: 20px;
+}
+
+
+#body-search-page{
+    display: flex;
+    flex-direction: row;
+}
+
+
+#resultados{
+    text-align: left;
+    padding-left: 10%;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    max-height: 5px;
+}
