@@ -1,11 +1,13 @@
 .btn-success{
-    background-color: #0095D6;
+    background-color: #400566;
     padding: 10px;
     border: 0;
     margin: 0;
     border-radius: 5px 5px 5px 5px;
     color:#fff;
     cursor: pointer;
+    position: relative;
+    font-size: 20px;
   }
 
   .btn-filtro{
@@ -14,8 +16,9 @@
     padding: 10px;
     border: 0;
     right: 35px;
+    top: 37px;
     cursor: pointer;
-    position: relative;
+    position: fixed;
   }
 
   button:hover{
@@ -23,7 +26,7 @@
   }
 
   input{
-    width: 350px;
+    width: 300px;
     padding: 10px;
     padding-right: 35px;
     border-radius: 5px;
