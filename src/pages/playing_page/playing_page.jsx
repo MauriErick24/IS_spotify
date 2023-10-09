@@ -14,11 +14,11 @@ class PlayingPage extends Component{
                 </div>
                 <div id="body-playing-page">
                     <div id="playing">
-                        <h1>EN REPRODUCCION</h1>
+                        <p id='playing-p'>EN REPRODUCCION</p>
                         <MusicCard/>
                     </div>
                     <div id="related">
-                        <h1>RELACIONADOS</h1>
+                        <p id='playing-p'> RELACIONADOS</p>
                         <RelatedList/>
                     </div>
                 </div>

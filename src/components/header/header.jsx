@@ -6,7 +6,7 @@ class Header extends Component{
         return(
             <div id="header-component">
                 <div id="logo-header-component">
-                    SPOTIFY
+                    MUZIK
                 </div>
                 <div id="options-header-component">
                     Espacio de mas opciones

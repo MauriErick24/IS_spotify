@@ -10,7 +10,7 @@ class RelatedMusicCard extends Component{
                 <p>Nombre de la cancion  | </p>
                 <p>Album | </p>
                 <p>Artista | </p>
-                <p>Anio </p>
+                <p>Año</p>
             </div>
         )
     }
