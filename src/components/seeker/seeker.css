@@ -1,6 +1,6 @@
 .btn-success{
     background-color: #400566;
-    padding: 10px;
+    padding: 6px;
     border: 0;
     margin: 0;
     border-radius: 5px 5px 5px 5px;
@@ -8,6 +8,7 @@
     cursor: pointer;
     position: relative;
     font-size: 20px;
+    left: 50px;
   }
 
   .btn-filtro{
@@ -29,8 +30,84 @@
     width: 300px;
     padding: 10px;
     padding-right: 35px;
-    border-radius: 5px;
-    border: 0;
+    border-radius: 10px;
+    border: 10;
     outline: none;
     font-size: 1rem;
+    text-align: center;
+    border-color: #fff;
+    color:white ;
+    background-color: #400566;
+  }
+
+  .menu{
+    background-color: #1A202C;
+    color: black;
+    height: 70px;
+  }
+
+  .menu_container{
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    max-width: 50%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .menu_links{
+    height: 100%;
+    transition: transform .5s;
+    display: inline-flex;
+  }
+
+  .menu_item{
+    list-style: none;
+    position: relative;
+    height: 100%;
+    
+    --clip: polygon(0 0,100% 0, 100% 0, 0 0);
+    --transform: rotate(-90deg);
+  }
+
+  .menu_item:hover{
+    --clip: polygon(0 0,100% 0, 100% 100%, 0% 100%);
+    --transform: rotate(0);
+  }
+
+  .menu_nesting{
+    clip-path: var(--clip);
+    list-style: none;
+    transition: clip-path .3s;
+    clip-path: var(--clip);
+    position: inherit;
+    right: 0;
+    bottom: 0;
+    width: max-content;
+    background-color: white;
+    
+  }
+
+  .menu_link{
+    color: black;
+    text-decoration: none;
+    padding: 0 30px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  .menu_link:hover{
+    background-color: #4b5a77;
+  }
+
+  .menu_link-inside{
+    padding: 30px 100px 30px 20px;
+  }
+  .menu_link-inside:hover{
+    background-color: #798499;
+    color: #1A202C;
   }

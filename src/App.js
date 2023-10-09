@@ -6,7 +6,7 @@ import Search_page from './pages/search_page/search_page';
 function App() {
   return (
     <div className="App">
-        <PlayingPage/>            
+        <PlayingPage/>  
     </div>
   );
 }
